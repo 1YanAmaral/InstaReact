@@ -1,3 +1,10 @@
+const iconsArray = [
+  "paper-plane-outline",
+  "compass-outline",
+  "heart-outline",
+  "person-outline"
+];
+
 function Navbar() {
   return (
     <div class="navbar">
@@ -21,10 +28,7 @@ function Navbar() {
         </div>
 
         <div class="icones">
-          <ion-icon name="paper-plane-outline"></ion-icon>
-          <ion-icon name="compass-outline"></ion-icon>
-          <ion-icon name="heart-outline"></ion-icon>
-          <ion-icon name="person-outline"></ion-icon>
+          {iconsArray.map(icon => <ion-icon name={icon}></ion-icon>)}
         </div>
 
         <div class="icones-mobile">
