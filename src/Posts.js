@@ -1,3 +1,5 @@
+import React from "react";
+
 const postsArray = [
   {
     image: "assets/img/meowed.svg",
@@ -17,13 +19,22 @@ const postsArray = [
   },
 ];
 
-const actionsArray = [
-  "heart-outline",
-  "chatbubble-outline",
-  "paper-plane-outline",
-];
+
 
 function Posts() {
+  const [likeState, setLikeState] = React.useState("not-liked");
+  const [shape, setShape] = React.useState("heart-outline")
+
+  function toggleLike() {
+    if (likeState === "not-liked") {
+      setLikeState("liked");
+      setShape("heart")
+    } else {
+      setShape("heart-outline");
+      setLikeState("not-liked")
+    }
+  }
+
   return (
     <div class="posts">
       {postsArray.map((post) => (
@@ -45,9 +56,9 @@ function Posts() {
           <div class="fundo">
             <div class="acoes">
               <div>
-                {actionsArray.map((actions) => (
-                  <ion-icon name={actions}></ion-icon>
-                ))}
+                <ion-icon name={shape} className={likeState} onClick={toggleLike}></ion-icon>
+                <ion-icon name="chatbubble-outline"></ion-icon>
+                <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
               <div>
                 <ion-icon name="bookmark-outline"></ion-icon>

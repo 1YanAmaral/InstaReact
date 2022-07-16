@@ -195,6 +195,10 @@ body {
   margin-right: 6px;
 }
 
+.post .fundo .acoes div:first-child ion-icon[name=heart] {
+  color: red;
+}
+
 .post .fundo .curtidas {
   display: flex;
   align-items: center;
@@ -210,6 +214,10 @@ body {
 
 .post:last-child {
   margin-bottom: 18px;
+}
+
+.liked {
+  color: red;
 }
 
 .sidebar {
