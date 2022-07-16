@@ -195,7 +195,7 @@ body {
   margin-right: 6px;
 }
 
-.post .fundo .acoes div:first-child ion-icon[name=heart] {
+ion-icon[name=heart] {
   color: red;
 }
 
