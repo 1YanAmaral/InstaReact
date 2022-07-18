@@ -54,10 +54,10 @@ function Post(props) {
   }
 
   return (
-    <div class="post">
+    <div class="post" onClick={toggleLike}>
       <div class="topo">
         <div class="usuario">
-          <img src={props.image} />
+          <img src={props.image}/>
           {props.user}
         </div>
         <div class="acoes">
